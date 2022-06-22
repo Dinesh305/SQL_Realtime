@@ -21,7 +21,7 @@ insert into google_company_users values (1,1,'English')
 -------------------------
 ;with cte_1 as 
 (
-select company_id,user_id,count(user_id) cnt from google_company_users where language in ('english' , 'german')
+select company_id,user_id,count(user_id) cnt from google_company_users where language in ('English' , 'German')
 group by company_id,user_id
 having count(user_id) >=2
 )
