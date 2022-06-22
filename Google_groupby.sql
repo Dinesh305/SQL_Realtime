@@ -1,4 +1,4 @@
-drop table if exists google_company_users 
+Drop table if exists google_company_users 
 create table google_company_users 
 (
 company_id int,
