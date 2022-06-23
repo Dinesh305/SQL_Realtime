@@ -1,4 +1,4 @@
---create table products
+create table products
 (
 product_id varchar(20) ,
 cost int
