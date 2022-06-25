@@ -53,10 +53,12 @@ from cte_1 where res=2 or res1 =2
 group by subject
 
 ------------------------------------------------------------------------
---select * from anlit_studentswith cte as (
-WITH CTE AS(SELECT *,
-         LAG(marks)OVER(PARTITION BY studentname ORDER BY testdate) AS prev_marks
-FROM anlit_students)
-SELECT studentid,marks,(CASE WHEN marks>prev_marks THEN 'Increased' 
-              WHEN marks<prev_marks THEN 'Decreased' END)AS IND_MARKS_STATUS
-FROM CTE
+--select * from anlit_studentswith 
+
+select *, case when marks < prev_marks then 'inc' else 'dec' end stay from 
+
+(
+
+SELECT *,LAG(marks)OVER(PARTITION BY studentname ORDER BY testdate) AS prev_marks
+FROM anlit_students) A
+order by testid,studentid
