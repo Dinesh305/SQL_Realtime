@@ -1,0 +1,53 @@
+--create table Ankit_bms (seat_no int ,is_empty varchar(10));
+--insert into Ankit_bms values
+--(1,'N')
+--,(2,'Y')
+--,(3,'N')
+--,(4,'Y')
+--,(5,'Y')
+--,(6,'Y')
+--,(7,'N')
+--,(8,'Y')
+--,(9,'Y')
+--,(10,'Y')
+--,(11,'Y')
+--,(12,'N')
+--,(13,'Y')
+--,(14,'Y');
+----------------------------------------------------------------------------------------------------
+
+--select * from Ankit_bms;
+
+--;with cte_1 as 
+--(
+--select seat_no,is_empty as current_row , 
+--lag(is_empty,1) over (order by seat_no) previous_row1,
+
+--lag(is_empty,2) over (order by seat_no) previous_row2,
+--lead(is_empty,1) over (order by seat_no) next_row_1,
+--lead(is_empty,2) over (order by seat_no) next_row_2
+--from ankit_bms
+--)
+--select * from cte_1 where (current_row ='y' and previous_row1 ='y' and next_row_1='y')
+--or 
+--(current_row ='y' and previous_row1 ='y' and previous_row2 ='y')
+--or 
+--(current_row ='y' and next_row_2 ='y' and next_row_1='y')
+----or (current_row ='y' and previous_row ='y')
+
+--;with cte_1 as 
+--(
+--select *, row_number() over (order by seat_no) res from ankit_bms where is_empty = 'y'
+--)
+--,cte_2 as
+--(select *, (seat_no - res) output from cte_1 
+--)
+
+----select * from cte_2 
+--,cte_3 as 
+--(
+--select  output, count(*) cnt from cte_2
+--group by output
+--having count(*) >=3
+--)
+--select * from cte_2 where output in (select output from cte_3)
