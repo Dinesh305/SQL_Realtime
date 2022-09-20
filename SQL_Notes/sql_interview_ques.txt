@@ -1,0 +1,35 @@
+1) what are the constraints? what are it's types?
+2) what is diff between cluster and non cluster index in SQL?
+3) what are the joins? types of joins?
+4) diff between delete and truncate?
+5) how to get unique records without using distinct clause?
+6) what is diff between DDL and DML?
+7) diff between decode and case?
+8) what is view? what are the types of views?
+9) diff between view and materialized view?
+10) what are the union, unionall, intersect, minus operators?
+11) how to find list of the indexes for a given table?
+12) what are the benefits and drawbacks of indexes?
+13) what is subquery? what are the types of subquery?
+14) what is rank, dense_rank, row_number?
+15) how to delete duplicate records in a table?
+16) what is function based index?
+17) what is normalization? types of normalization? why it's needed?
+18) what are the query optimization technique in oracle?
+19) what are the global temporary tables?
+20) what are partitions? explain diff types?
+21) what is substr() , instr() functions?
+22) query to find nth highest salary?
+23) diff between in and exists operator?
+24) diff between left outer join and inner join?
+25) diff between nvl and coalsce function?
+26) what is dual table in oracle?
+27) diff between replace and translate?
+28) what is index? Types of index? Advantages of index?
+29) what is with check option clause in view? what is force view?
+30) what is self join? how it works?
+31) Explain on delete cascade?
+32) what is pivot function?
+33) what is explain plan?
+34) what are the oracle hints?
+35) how to update complex view?
